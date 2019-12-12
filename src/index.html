@@ -6,15 +6,32 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta name="theme-color" content="#cc231e" />
     <meta name="msapplication-TileColor" content="#cc231e" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Christmas!!</title>
   </head>
   <body>
-    <noscript>
-      <strong>
-        We're sorry but this app doesn't work properly without JavaScript
-        enabled. Please enable it to continue.
-      </strong>
-    </noscript>
-    <div id="app"></div>
+    <div class="container">
+      <div class="col-12 mt-5 d-flex justify-content-center">
+        <div class="box">
+          <div class="box-body">
+            <div class="box-lid">
+              <div class="box-bowtie"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+  <script>
+    $(document).ready(function() {
+      document.addEventListener("click", function() {
+        $(".box").addClass("clicked");
+        $(".container").append(
+          '<div class="inside"><a href="https://www.japancandybox.com/">Klicka mig!</a></div>'
+        );
+        document.removeEventListener("click");
+      });
+    });
+  </script>
 </html>
