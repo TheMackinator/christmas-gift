@@ -17,6 +17,7 @@ html {
   min-width: 100vw;
 }
 body {
+  font-family: "Helvetica, sans-serif";
   background: black;
   min-height: 100vh;
   min-width: 100vw;
@@ -211,10 +212,13 @@ body {
   position: absolute;
   animation: open-present 1s forwards;
   animation-delay: 0.7s;
-  top: 35%;
+  top: 24%;
   left: 50%;
   transform: translateX(-50%);
-  min-width: 250px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "image1 image2" "link link";
   a {
     display: block;
     padding: 20px;
@@ -222,5 +226,16 @@ body {
     height: 100%;
     width: 100%;
     text-align: center;
+    grid-area: link;
+  }
+  img {
+    height: 100px;
+    width: 100px;
+  }
+  img:first-child {
+    grid-area: image1;
+  }
+  img:last-child {
+    grid-area: image2;
   }
 }

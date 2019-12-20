@@ -25,13 +25,14 @@
   </body>
   <script>
     $(document).ready(function() {
-      document.addEventListener("click", function() {
-        $(".box").addClass("clicked");
-        $(".container").append(
-          '<div class="inside"><a href="https://www.japancandybox.com/">Klicka mig!</a></div>'
-        );
-        document.removeEventListener("click");
-      });
+      document.addEventListener("click", clickHandler);
     });
+    function clickHandler() {
+      $(".box").addClass("clicked");
+      $(".container").append(
+        '<div class="inside"><img src="./img/hi-chew-2.jpg"/> <img src="./img/sweet-candy.jpg"/><a href="https://www.japancandybox.com/">Klicka mig!</a> </div>'
+      );
+      document.removeEventListener("click", clickHandler);
+    }
   </script>
 </html>
