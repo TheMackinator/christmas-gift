@@ -91,3 +91,23 @@ body {
   flex: 0 0 0;
   margin-left: var(--margin-small);
 }
+.list-clean {
+  list-style: none;
+  padding-left: var(--padding-medium);
+}
+
+.survey-question {
+  margin:  var(--margin-small) 0;
+  display: flex;
+  align-items: center;
+  padding-left: var(--padding-medium);
+  &:before {
+    display: inline-block;
+    content: '';
+    margin-right: 5px;
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    background: var(--color-accent);
+  }
+}

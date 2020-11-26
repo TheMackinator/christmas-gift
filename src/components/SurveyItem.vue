@@ -14,12 +14,13 @@
          v-show="isExpanded"
          :key="`${surveyTitle}-${key}`">
       <h4>{{category.index}}</h4>
-      <survey-question v-for="question in category.questions"
-                       :key="`${surveyTitle}-${category.index_code}-${question.id}`"
+      <!-- All these elaborate keys are to avoid duplicate keys during render, thus causing irregularites within Vues rendering engine -->
+      <survey-question v-for="(question, index) in category.questions"
+                       :key="`${surveyTitle}-${category.index_code}-${question.id}-${index}`"
                        :question="question" />
-      <survey-question v-for="subindex in category.subindexes"
-                       :key="`${surveyTitle}-${category.index_code}-${subindex.index_code}`"
-                       :question="subindex" />
+      <survey-subindex :subindex="subindex"
+                       v-for="(subindex, index) in category.subindexes"
+                       :key="`${surveyTitle}-${category.index_code}-${subindex.index_code}-${index}`" />
     </div>
   </div>
 </template>
@@ -27,10 +28,13 @@
 <script>
 import SurveyQuestion from "components/SurveyQuestion.vue";
 import ChevronDown from "svg/chevron-down.svg";
+import SurveySubindex from "components/SurveySubindex.vue";
+
 export default {
   components: {
     SurveyQuestion,
     ChevronDown,
+    SurveySubindex,
   },
   props: {
     survey: {
