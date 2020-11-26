@@ -1,0 +1,17 @@
+html {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: var(--font-color-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+  margin-bottom: var(--margin-small);
+}
+.text-center {
+  text-align: center;
+}
+.page-title {
+  margin-bottom: var(--margin-default);
+}

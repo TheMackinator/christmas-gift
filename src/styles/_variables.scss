@@ -1,0 +1,27 @@
+:root {
+  --padding-default: 1.1rem;
+  --padding-small: calc(var(--padding-default) / 2);
+  --padding-smaller: calc(var(--padding-default) / 4);
+  --padding-medium: 1.4rem;
+  --padding-large: 2rem;
+  --padding-extra-large: 4rem;
+  --margin-default: var(--padding-default);
+  --margin-small: var(--padding-small);
+  --margin-smaller: var(--padding-smaller);
+  --margin-medium: var(--padding-medium);
+  --margin-large: var(--padding-large);
+  --margin-extra-large: var(--padding-extra-large);
+  --border-radius-default: 4px;
+    
+  // Colors
+  --bg-body: #f2f3f7;
+  --font-color-main: #454c61;
+  --gray: #ced4da;
+  --gray-dark: #adb5bd;
+  --gray-darker: #6c757d;
+  --gray-darkest: #495057;
+
+  // Shadows
+  --box-shadow-inputs: 0 1px 3px 0px rgba(60, 64, 67, 0.1);
+  --box-shadow-boxes: 0 1.5px 2px rgba(0, 0, 0, 0.07);
+}
