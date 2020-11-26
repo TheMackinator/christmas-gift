@@ -14,7 +14,7 @@
          v-show="isExpanded"
          :key="`${surveyTitle}-${key}`">
       <h4>{{category.index}}</h4>
-      <!-- All these elaborate keys are to avoid duplicate keys during render, thus causing irregularites within Vues rendering engine -->
+      <!-- All these elaborate keys are used to avoid duplicate keys during render, thus causing irregularites within Vues rendering engine -->
       <survey-question v-for="(question, index) in category.questions"
                        :key="`${surveyTitle}-${category.index_code}-${question.id}-${index}`"
                        :question="question" />

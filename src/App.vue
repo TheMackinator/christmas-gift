@@ -2,7 +2,7 @@
   <div id="app"
        class="content-wrapper">
     <h2 class="text-center page-title">Enkäter</h2>
-    <div v-if="isLoading"
+    <div v-if="!isLoading"
          class="spinner-wrapper">
       <h4>Enkäter läses in</h4>
       <div>

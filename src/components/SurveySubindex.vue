@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h5>{{subIndexTitle}}</h5>
+    <h5 class="media-right">{{subIndexTitle}}</h5>
     <survey-question v-for="(question, index) in subindex.questions"
                      :key="`${subindex.index_code}-question${index}-${question.id}`"
                      :question="question" />

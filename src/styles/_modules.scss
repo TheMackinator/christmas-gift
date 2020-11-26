@@ -50,11 +50,18 @@ body {
 }
 .spinner-wrapper {
   width: 100%;
+  min-height: 500px;
+  height: 100%;
   display: flex;
   align-content: center;
   justify-content: center;
   text-align: center;
-  flex-direction: row;
+  flex-direction: column;
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .surveys {
   display: grid;
